@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpatrici <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/28 13:11:12 by bpatrici          #+#    #+#             */
-/*   Updated: 2021/04/29 15:26:34 by bpatrici         ###   ########.fr       */
+/*   Created: 2021/04/29 15:26:49 by bpatrici          #+#    #+#             */
+/*   Updated: 2021/04/29 15:41:22 by bpatrici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *str)
+#include <string.h>
+#include <stdio.h>
+
+char buf[10];
+
+int main()
 {
-	int i;
-	int k;
+	char *str = "Образец строки";
+	size_t sz;
 
-	k = 1;
-	i = 0;
-	while (str[i] != '\0' )
-	{
-		if (str[i] > 47 & str[i] < 58)
+	buf[0] = '\0';
 
-	}	
+	sz = srtlcpy(buf, str, sizeof(buf));
+	printf("%s\n", buf);
+
+	return 0;
 }

@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpatrici <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/28 13:11:12 by bpatrici          #+#    #+#             */
-/*   Updated: 2021/04/29 15:26:34 by bpatrici         ###   ########.fr       */
+/*   Created: 2021/04/29 14:26:25 by bpatrici          #+#    #+#             */
+/*   Updated: 2021/04/29 15:13:48 by bpatrici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *str)
+#include <stdio.h>
+#include <string.h>
+
+int ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int i;
-	int k;
+	size_t nul;
+	int ret;
 
-	k = 1;
-	i = 0;
-	while (str[i] != '\0' )
-	{
-		if (str[i] > 47 & str[i] < 58)
-
-	}	
+	ret = 0;
+	nul = 0;
 }
