@@ -1,4 +1,3 @@
-	<img align="right" src="https://github.com/makarbass/libft/blob/main/Screenshot1.png" />
 	✓	memset
 	✓	bzero
 	◦	memcpy
