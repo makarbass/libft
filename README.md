@@ -1,9 +1,9 @@
 	✓	memset
 	✓	bzero
-	◦	memcpy
+	✓	memcpy
 	◦	memccpy
 	◦	memmove
-	◦	memchr
+	✓	memchr
 	◦	memcmp
 	✓	strlen
 	◦	strlcpy
