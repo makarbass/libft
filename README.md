@@ -1,5 +1,3 @@
-	![Screenshot](Screen%20Shot%202021-05-05%20at%2012.54.29%20PM.png)
-
 	✓	memset
 	✓	bzero
 	◦	memcpy
