@@ -6,11 +6,13 @@
 /*   By: bpatrici <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 12:47:29 by bpatrici          #+#    #+#             */
-/*   Updated: 2021/04/28 12:51:06 by bpatrici         ###   ########.fr       */
+/*   Updated: 2021/05/05 11:50:21 by bpatrici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_ascii(int arg)
+#include "libft.h"
+
+int ft_isascii(int arg)
 {
 	if (arg >= 0 & arg <= 127)
 		return 1;

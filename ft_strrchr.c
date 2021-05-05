@@ -6,12 +6,11 @@
 /*   By: bpatrici <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 14:07:07 by bpatrici          #+#    #+#             */
-/*   Updated: 2021/04/29 14:20:56 by bpatrici         ###   ########.fr       */
+/*   Updated: 2021/05/05 11:48:37 by bpatrici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char *ft_strrchr(const char *str, int ch)
 {
@@ -34,19 +33,3 @@ char *ft_strrchr(const char *str, int ch)
 		return 0;
 	return ((char *)str+j);
 }
-
-int main()
-{
-	char  str[11] = "0163456769";
-	char  str2[11] = "0163456769";
-	int ch = 'x';
-	char *ach;
-	char *ach2;
-
-	ach = strrchr(str, ch);
-	ach2 = ft_strrchr(str2,ch);
-	printf("OR: %s\n", ach);
-	printf("MY: %s\n", ach2);
-	return 0;
-}
-
