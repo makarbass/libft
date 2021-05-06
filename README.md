@@ -4,13 +4,22 @@ ft_bzero:      [OK] [OK] [OK] [OK]
 
 ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
-ft_memccpy:    [MISSING]
+ft_memccpy:    [OK] [OK] [OK] [FAILED] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+[fail]: your memccpy's return is false/doesn't work with basic params
+[fail]: your memccpy does not work with not found char
 
-ft_memmove:    [MISSING]
+
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [CRASH] [OK] 
+[crash]: your memmove does not well with NULL as both parameters and size
 
 ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
-ft_memcmp:     [MISSING]
+ft_memcmp:     [OK] [OK] [OK] [FAILED] [FAILED] [FAILED] [FAILED] [OK] [OK] [OK] 
+[fail]: your memcmp does not work with basic input
+[fail]: your memcmp does not cast the memory in unsigned char
+[fail]: your memcmp stop at \0
+[fail]: your memcmp does not work with basic input
+
 
 ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
@@ -32,24 +41,43 @@ ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] [OK]
 [fail]: your strchr does not work with \0
 
 
-ft_strrchr:    [OK] [FAILED] [OK] [OK] [FAILED] [OK] [OK] [OK] 
-[fail]: your strrchr does not work with basic input
-[fail]: your strrchr does not work with \0
+ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+
+ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] [FAILED] [OK] [OK] [OK] [OK] 
+[fail]: your strncmp does not cast in unsigned char the diff
+[fail]: your strncmp does not work with non ascii chars
 
 
-ft_strncmp:    [MISSING]
+ft_strlcpy:    [OK] [OK] [FAILED] [FAILED] [FAILED] [OK] [💥 ] 
+[fail]: your strlcpy overflow the dest
+[fail]: your strlcpy does works whe size < strlen(src)
+[fail]: your strlcpy does not works with 0-length string
 
-ft_strlcpy:    [MISSING]
 
-ft_strlcat:    [MISSING]
+ft_strlcat:    [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] [FAILED] [FAILED] [OK] [FAILED] [OK] [OK] 
+[fail]: your strlcat does not work with basic input
+[fail]: your strlcat does not work with basic input
+[fail]: your strlcat does not work with over length size
+[fail]: your strcat does not work with empty string as second parameter
+[fail]: your strlcat does not set a \0 to the end
+[fail]: your strlcat return value is false
 
-ft_strnstr:    [MISSING]
+
+ft_strnstr:    [OK] [OK] [FAILED] [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] [NO CRASH] 
+[fail]: your strnstr does not work with basic input
+[fail]: your strnstr does not work with basic input
+[no crash]: your strnstr does not segfault when null parameter is sent
+[no crash]: your strnstr does not segfault when null parameter is sent
+
 
 ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [KO] [KO] [OK] [OK] [OK] [OK] 
 [KO]: your atoi does not work with over long max value
 [KO]: your atoi does not work with over long min value
 
-ft_calloc:     [MISSING]
 
-ft_strdup:     [MISSING]
+ft_calloc:     [OK] [OK] [FAILED] [OK] [OK] 
+[fail]: your calloc don't work with empty string
 
+
+ft_strdup:     [OK] [OK] [OK] [KO] [OK] [OK] [OK] 
+[KO]: your strdup did not allocate the good size so the \0 test may be false
