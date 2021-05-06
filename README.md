@@ -29,37 +29,37 @@
 [fail]: your memcmp does not work with basic input
 
 
-ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+<b>ft_strlen:</b>     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
-ft_isalpha:    [OK] 
+<b>ft_isalpha:</b>    [OK] 
 
-ft_isdigit:    [OK] 
+<b>ft_isdigit:</b>    [OK] 
 
-ft_isalnum:    [OK] 
+<b>ft_isalnum:</b>    [OK] 
 
-ft_isascii:    [OK] 
+<b>ft_isascii:</b>    [OK] 
 
-ft_isprint:    [OK] 
+<b>ft_isprint:</b>    [OK] 
 
-ft_toupper:    [OK] 
+<b>ft_toupper:</b>    [OK] 
 
-ft_tolower:    [OK] 
+<b>ft_tolower:</b>    [OK] 
 
-ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] [OK] 
+<b>ft_strchr:</b>     [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] [OK] 
 
 [fail]: your strchr does not work with \0
 
 
-ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+<b>ft_strrchr:</b>    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
-ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] [FAILED] [OK] [OK] [OK] [OK] 
+<b>ft_strncmp:</b>    [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] [FAILED] [OK] [OK] [OK] [OK] 
 
 [fail]: your strncmp does not cast in unsigned char the diff
 
 [fail]: your strncmp does not work with non ascii chars
 
 
-ft_strlcpy:    [OK] [OK] [FAILED] [FAILED] [FAILED] [OK] [💥 ] 
+<b>ft_strlcpy:</b>    [OK] [OK] [FAILED] [FAILED] [FAILED] [OK] [💥 ] 
 
 [fail]: your strlcpy overflow the dest
 
@@ -68,7 +68,7 @@ ft_strlcpy:    [OK] [OK] [FAILED] [FAILED] [FAILED] [OK] [💥 ]
 [fail]: your strlcpy does not works with 0-length string
 
 
-ft_strlcat:    [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] [FAILED] [FAILED] [OK] [FAILED] [OK] [OK] 
+<b>ft_strlcat:</b>    [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] [FAILED] [FAILED] [OK] [FAILED] [OK] [OK] 
 
 [fail]: your strlcat does not work with basic input
 
@@ -83,7 +83,7 @@ ft_strlcat:    [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] [FAILED] [FAILED] [OK] 
 [fail]: your strlcat return value is false
 
 
-ft_strnstr:    [OK] [OK] [FAILED] [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] [NO CRASH] 
+<b>ft_strnstr:</b>    [OK] [OK] [FAILED] [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] [NO CRASH] 
 
 [fail]: your strnstr does not work with basic input
 
@@ -94,18 +94,18 @@ ft_strnstr:    [OK] [OK] [FAILED] [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [O
 [no crash]: your strnstr does not segfault when null parameter is sent
 
 
-ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [KO] [KO] [OK] [OK] [OK] [OK] 
+<b>ft_atoi:</b>       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [KO] [KO] [OK] [OK] [OK] [OK] 
 
 [KO]: your atoi does not work with over long max value
 
 [KO]: your atoi does not work with over long min value
 
 
-ft_calloc:     [OK] [OK] [FAILED] [OK] [OK] 
+<b>ft_calloc:</b>     [OK] [OK] [FAILED] [OK] [OK] 
 
 [fail]: your calloc don't work with empty string
 
 
-ft_strdup:     [OK] [OK] [OK] [KO] [OK] [OK] [OK] 
+<b>ft_strdup:</b>     [OK] [OK] [OK] [KO] [OK] [OK] [OK] 
 
 [KO]: your strdup did not allocate the good size so the \0 test may be false
