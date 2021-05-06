@@ -1,23 +1,23 @@
-ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+<b>ft_memset:</b>     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
-ft_bzero:      [OK] [OK] [OK] [OK] 
+<b>ft_bzero:</b>    [OK] [OK] [OK] [OK] 
 
-ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+<b>ft_memcpy: </b>    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
-ft_memccpy:    [OK] [OK] [OK] [FAILED] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+<b>ft_memccpy: </b>   [OK] [OK] [OK] [FAILED] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
 [fail]: your memccpy's return is false/doesn't work with basic params
 
 [fail]: your memccpy does not work with not found char
 
 
-ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [CRASH] [OK] 
+<b>ft_memmove:  </b>  [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [CRASH] [OK] 
 
 [crash]: your memmove does not well with NULL as both parameters and size
 
-ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+<b>ft_memchr:</b>     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
-ft_memcmp:     [OK] [OK] [OK] [FAILED] [FAILED] [FAILED] [FAILED] [OK] [OK] [OK] 
+<b>ft_memcmp: </b>    [OK] [OK] [OK] [FAILED] [FAILED] [FAILED] [FAILED] [OK] [OK] [OK] 
 
 [fail]: your memcmp does not work with basic input
 
