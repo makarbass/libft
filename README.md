@@ -5,16 +5,9 @@
 
 <b>ft_memcpy: </b>    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
-<b>ft_memccpy: </b>   [OK] [OK] [OK] [FAILED] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+<b>ft_memccpy: </b>   [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 
-[fail]: your memccpy's return is false/doesn't work with basic params
-
-[fail]: your memccpy does not work with not found char
-
-
-<b>ft_memmove:  </b>  [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [CRASH] [OK] 
-
-[crash]: your memmove does not well with NULL as both parameters and size
+<b>ft_memmove:  </b>  [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 
 <b>ft_memchr:</b>     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
@@ -59,7 +52,9 @@
 [fail]: your strncmp does not work with non ascii chars
 
 
-<b>ft_strlcpy:</b>    [OK] [OK] [FAILED] [FAILED] [FAILED] [OK] [💥 ] 
+<b>ft_strlcpy:</b>    [FAILED] [OK] [FAILED] [FAILED] [FAILED] [OK] [🛡 ]
+
+[fail]: your strlcpy does not works with basic input
 
 [fail]: your strlcpy overflow the dest
 
@@ -68,44 +63,14 @@
 [fail]: your strlcpy does not works with 0-length string
 
 
-<b>ft_strlcat:</b>    [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] [FAILED] [FAILED] [OK] [FAILED] [OK] [OK] 
-
-[fail]: your strlcat does not work with basic input
-
-[fail]: your strlcat does not work with basic input
-
-[fail]: your strlcat does not work with over length size
-
-[fail]: your strcat does not work with empty string as second parameter
-
-[fail]: your strlcat does not set a \0 to the end
-
-[fail]: your strlcat return value is false
+<b>ft_strlcat:</b>    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
 
-<b>ft_strnstr:</b>    [OK] [OK] [FAILED] [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] [NO CRASH] 
-
-[fail]: your strnstr does not work with basic input
-
-[fail]: your strnstr does not work with basic input
-
-[no crash]: your strnstr does not segfault when null parameter is sent
-
-[no crash]: your strnstr does not segfault when null parameter is sent
+<b>ft_strnstr:</b>    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 
 
-<b>ft_atoi:</b>       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [KO] [KO] [OK] [OK] [OK] [OK] 
+<b>ft_atoi:</b>       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 
-[KO]: your atoi does not work with over long max value
+<b>ft_calloc:</b>     [OK] [OK] [OK] [OK] [OK] 
 
-[KO]: your atoi does not work with over long min value
-
-
-<b>ft_calloc:</b>     [OK] [OK] [FAILED] [OK] [OK] 
-
-[fail]: your calloc don't work with empty string
-
-
-<b>ft_strdup:</b>     [OK] [OK] [OK] [KO] [OK] [OK] [OK] 
-
-[KO]: your strdup did not allocate the good size so the \0 test may be false
+<b>ft_strdup:</b>     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
