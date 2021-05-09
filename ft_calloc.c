@@ -3,11 +3,9 @@
 void * ft_calloc(size_t count, size_t size)
 {
 	char * ptr;
-
-	ptr = malloc(count * size); //выделяем через маллок count элементов, размером size, в функцию можно отправить  sizeof(char)
-	if(!ptr)
+	
+	if(!(ptr = malloc(count * size)))
 		return NULL;
-	ft_bzero(ptr, count);
-
+	ft_bzero(ptr, count*size);
 	return(ptr);
 }

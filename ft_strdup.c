@@ -3,15 +3,13 @@
 char * ft_strdup(const char *s1)
 {
 	char * ptr;
-	size_t i;
-	size_t size_m;
+	int i;
 
-	size_m = ft_strlen(s1);
-	ptr = (char *)malloc(size_m * sizeof(s1));
-	if(!ptr)
-		return NULL;
 	i = 0;
-	while (i < size_m)
+	ptr = (char *)malloc(sizeof(char)* (ft_strlen(s1) +1));
+	if(!ptr)
+		return ((void*)0);
+	while (s1[i])
 		{
 			ptr[i] = s1[i];
 			i++;
