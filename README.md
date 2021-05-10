@@ -51,13 +51,23 @@
 <b>ft_strdup:</b>     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 
 <h1> Second Part </h1>
+
 ft_substr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [🛡 ] [OK] 
+
 ft_strjoin:    [OK] [OK] [OK] [OK] [OK] [🛡 ] 
+
 ft_strtrim:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [🛡 ] 
+
 ft_split:      [MISSING]
+
 ft_itoa:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+
 ft_strmapi:    [OK] [OK] [OK] [OK] [OK] [🛡 ] 
+
 ft_putchar_fd: [OK] [OK] 
+
 ft_putstr_fd:  [OK] [OK] [🛡 ] 
+
 ft_putendl_fd: [OK] [OK] [🛡 ] 
+
 ft_putnbr_fd:  [OK] [OK] [OK] [OK] [OK] 
