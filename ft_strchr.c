@@ -19,10 +19,14 @@ char *ft_strchr(const char *str, int ch)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == ch)
+		if (str[i] == (char)ch)
 			return((char *)str+i);
-		else
-			i++;
+		i++;
 	}
-	return(0);
+	if ((char)ch == str[i])
+		return((char *)str+i);
+	return(NULL);
 }
+
+
+
