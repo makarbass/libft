@@ -6,16 +6,16 @@
 /*   By: bpatrici <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 12:05:19 by bpatrici          #+#    #+#             */
-/*   Updated: 2021/05/05 11:47:50 by bpatrici         ###   ########.fr       */
+/*   Updated: 2021/05/11 13:46:04 by bpatrici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int arg)
+int	ft_tolower(int arg)
 {
 	if (arg > 64 & arg < 91)
 		return (arg + 32);
-	else 
+	else
 		return (arg);
 }

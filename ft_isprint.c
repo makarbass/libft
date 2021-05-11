@@ -6,16 +6,16 @@
 /*   By: bpatrici <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 12:21:08 by bpatrici          #+#    #+#             */
-/*   Updated: 2021/05/05 11:49:59 by bpatrici         ###   ########.fr       */
+/*   Updated: 2021/05/11 12:34:13 by bpatrici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int arg)
+int	ft_isprint(int arg)
 {
 	if (arg > 31 & arg < 127)
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }

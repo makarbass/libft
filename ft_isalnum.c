@@ -6,16 +6,17 @@
 /*   By: bpatrici <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 12:30:27 by bpatrici          #+#    #+#             */
-/*   Updated: 2021/05/05 12:10:11 by bpatrici         ###   ########.fr       */
+/*   Updated: 2021/05/11 12:29:37 by bpatrici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int arg)
+int	ft_isalnum(int arg)
 {
-	if ((arg > 47 & arg < 58) || (arg > 64 & arg < 91) || (arg > 96 & arg < 123))
-		return 1;
+	if ((arg > 47 & arg < 58) || (arg > 64 & arg < 91)
+		|| (arg > 96 & arg < 123))
+		return (1);
 	else
-		return 0;
+		return (0);
 }

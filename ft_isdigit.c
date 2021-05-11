@@ -6,16 +6,16 @@
 /*   By: bpatrici <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 12:37:39 by bpatrici          #+#    #+#             */
-/*   Updated: 2021/05/05 11:50:07 by bpatrici         ###   ########.fr       */
+/*   Updated: 2021/05/11 12:32:15 by bpatrici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int arg)
+int	ft_isdigit(int arg)
 {
 	if (arg > 47 & arg < 58)
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }
