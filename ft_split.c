@@ -22,66 +22,59 @@ int	numc(char const *s, char c)
 	while (s[i])
 	{
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-		{
 			t++;
-		}
 		i++;
 	}
 	return (t);
 }
 
-void	ft_clean(char **arr)
+void	*ft_clean(char **arr, size_t n)
 {
-	while (*arr)
-	{
-		free(*arr);
-		arr++;
-	}
+	while (n--)
+		free(arr[n]);
 	free(arr);
+	return (NULL);
 }
 
-char	**osnova(char **arr, char const *s, int t, char c)
+char	*ft_osnova(char const **s, char c)
 {
-	int		i;
-	char	*copy;
+	char	*a;
+	size_t	i;
 
 	i = 0;
-	copy = (char *)s;
-	while (i < t)
-	{
-		copy = ft_strchr(copy, c);
-		if (!copy)
-			copy = ft_strlen(s) + (char *)s;
-		if (copy - s > 0)
-			arr[i++] = ft_substr(s, 0, copy - s);
-		if (!arr[i - 1])
-		{
-			ft_clean(arr);
-			return (NULL);
-		}
-		s = copy;
-		s++;
-		copy++;
-	}
-	arr[i] = (NULL);
-	return (arr);
+	while ((*s)[i] != c && (*s)[i])
+		i++;
+	a = ft_substr(*s, 0, i);
+	if (!a)
+		return (NULL);
+	*s += i;
+	return (a);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	*ch;
 	char	**arr;
-	int		t;
+	size_t	i;
 
-	if (!c || !s)
+	if (!s)
 		return (NULL);
-	ch = &c;
-	t = numc(s, c);
-	arr = (char **)malloc(sizeof(char *) * (t + 1));
+	arr = (char **)malloc(sizeof(char *) * (numc(s, c) + 1));
 	if (!arr)
 		return (NULL);
-	s = ft_strtrim(s, ch);
-	arr = osnova(arr, s, t, c);
+	i = 0;
+	while (*s)
+	{
+		while (*s == c)
+			s++;
+		if (*s)
+		{
+			arr[i] = ft_osnova(&s, c);
+			if (arr[i] == NULL)
+				return (ft_clean(arr, i));
+			i++;
+		}
+	}
+	arr[i] = NULL;
 	if (!arr)
 		return (NULL);
 	return (arr);

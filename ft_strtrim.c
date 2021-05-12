@@ -21,9 +21,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	len = ft_strlen((char *)set);
-	trim = (char *)malloc(sizeof (char) * (len + 1));
-	if (!trim)
-		return (NULL);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	s_len = ft_strlen((char *)s1);

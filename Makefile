@@ -10,37 +10,70 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= libft.a
-CFLAGS		= -Wall -Werror -Wextra -I. -c
-FILES		= *.c
-OBJ			= $(FILES:%.c=%.o)
+NAME = libft.a
+
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+AR = ar rcs
+RM = rm -f
+
+FILES = ft_memset \
+		ft_bzero \
+		ft_memcpy \
+		ft_memccpy \
+		ft_memmove \
+		ft_memchr \
+		ft_memcmp \
+		ft_strlen \
+		ft_strlcpy \
+		ft_strlcat \
+		ft_strchr \
+		ft_strrchr \
+		ft_strnstr \
+		ft_strncmp \
+		ft_atoi \
+		ft_isalpha \
+		ft_isdigit \
+		ft_isalnum \
+		ft_isascii \
+		ft_isprint \
+		ft_toupper \
+		ft_tolower \
+		ft_calloc \
+		ft_strdup \
+		ft_substr \
+		ft_strjoin \
+		ft_strtrim \
+		ft_split \
+		ft_itoa \
+		ft_strmapi \
+		ft_putchar_fd \
+		ft_putstr_fd \
+		ft_putendl_fd \
+		ft_putnbr_fd \
+		ft_strncmp \
+
+SRCS_DIR = ./
+SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
+
+OBJS_DIR = ./
+OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
+
+
+.c.o: $(SRCS)
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+$(NAME): $(OBJS)
+	$(AR) $@ $^
 
 all: $(NAME)
 
-copy:
-	cp -f libc-funcs/*.c .
-	cp -f additional-funcs/*.c .
-	cp -f bonus-funcs/*.c .
-	cp -f personal-funcs/*.c .
-
-# This won't run if the .o files don't exist or are not modified
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
-
-# This won't run if the source files don't exist or are not modified
-$(OBJ): $(FILES)
-	gcc $(CFLAGS) $(FILES)
-
 clean:
-	rm -f $(OBJ)
-	rm -f $(FILES) # comment this line if you don't want it to remove the source files from the root
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
-re: fclean all
+re: clean all
 
-# I use .PHONY to make sure that gnu make will still run even if files called
-# clean / fclean / all and re already exist in the directory
-.PHONY: clean fclean all re
-
+.PHONY: all clean fclean re
